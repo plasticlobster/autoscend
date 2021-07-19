@@ -698,3 +698,15 @@ float turns_to_kill(float dmg)
 	//how long will it take us to kill the current enemy if we are able to deal dmg to it each round
 	return monster_hp().to_float() / dmg;
 }
+
+float combat_predict_min_dmg_dealt(skill sk, monster enemy)
+{
+	#predict the minimum amount of damage we expect to be able to deal to enemy with sk. using a float to prevent int rounding elsewhere.
+	#do not verify we can cast it here. this will be handled elsewhere.
+	if(!sk.combat)
+	{
+		return 0.0;		//noncombat skill can not deal damage.
+	}
+	float retval;
+	return retval;
+}
